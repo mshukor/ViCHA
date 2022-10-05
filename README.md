@@ -204,3 +204,6 @@ You can visualize the Grounding results using the `visualization.ipynb` notebook
   year={2022}
 }
 </pre>
+
+### Aknowledgment:
+This code is based on the [ALBEF](https://github.com/salesforce/ALBEF) repo and borrows some code from [CLIP](https://github.com/openai/CLIP), [timm](https://github.com/rwightman/pytorch-image-models).
