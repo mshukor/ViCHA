@@ -1,0 +1,25 @@
+train_file: ['coco_kw.json',    
+              'sbu_kw.json',
+              'vg_kw.json',
+               ]
+
+# each train_file (json) contains a python list where each item is {'image': img_path, 'caption': text or list_of_text }  
+
+bert_config: 'configs/config_bert.json'
+
+image_res: 256
+vision_width: 768
+embed_dim: 256
+batch_size: 32
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 1, min_lr: 1e-5, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 1, cooldown_epochs: 0}
+
+
+
+
+kw_img_dataset: True
+sep_token: False
+kw_img_model: True
+
+num_hidden_layers_kw: 2

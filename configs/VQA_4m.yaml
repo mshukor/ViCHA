@@ -1,0 +1,40 @@
+train_file: ['vqa_train.json',
+             'vqa_val.json',
+             'vg_qa.json' ] #
+             
+test_file: ['vqa_test.json']
+answer_list: 'answer_list.json'
+
+vqa_root: 'coco/' #train2014/
+vg_root: 'visual_genome/'  #image/
+
+image_res: 384 
+batch_size_train: 8 
+batch_size_test: 16
+k_test: 128
+
+alpha: 0.4
+distill: True
+warm_up: True
+
+eos: '[SEP]'
+
+bert_config: 'configs/config_bert.json'
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 8, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 4, cooldown_epochs: 0}
+
+vision_width: 768
+
+
+kw_img_dataset: True
+sep_token: False
+kw_img_model: True
+
+num_hidden_layers_kw: 2
+
+
+
+
+
+

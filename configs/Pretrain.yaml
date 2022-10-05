@@ -1,0 +1,43 @@
+train_file: ['coco_kw.json',    
+              'sbu_kw.json',
+              'vg_kw.json',
+               ]
+                
+image_res: 256
+vision_width: 768
+embed_dim: 256
+batch_size: 32
+temp: 0.07
+mlm_probability: 0.15
+queue_size: 65536
+momentum: 0.995
+alpha: 0.4
+
+optimizer: {opt: adamW, lr: 1e-4, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 1e-4, epochs: 11, min_lr: 1e-5, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 20, cooldown_epochs: 0}
+
+
+
+kw_img_dataset: True
+sep_token: False
+kw_img_model: True
+
+num_hidden_layers_kw: 2
+
+randkw_p: 0.3
+
+## multiscale info nce
+return_hidden_state: true
+num_hidden_align: 5
+ita_hidden_weight: 0.1 # 0.5
+ita_hidden_weights: [1, 1, 1, 1, 1] # [0.5, 0.6, 0.7, 0.8, 0.9]
+
+bert_config: 'configs/config_bert_multiscale.json'
+
+
+
+mae: True
+mask_ratio: 0.75
+unimodal_mae: True
+
+
