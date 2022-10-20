@@ -197,10 +197,10 @@ You can visualize the Grounding results using the `visualization.ipynb` notebook
  
 ### Citation.
 <pre>
-@article{shukor2022efficient,
+@inproceedings{shukor2022efficient,
   title={Efficient Vision-Language Pretraining with Visual Concepts and Hierarchical Alignment},
   author={Shukor, Mustafa and Couairon, Guillaume and Cord, Matthieu},
-  journal={arXiv preprint arXiv:2208.13628},
+  booktitle={33rd British Machine Vision Conference (BMVC)},
   year={2022}
 }
 </pre>
